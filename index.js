@@ -3,6 +3,16 @@ const bodyParser = require('body-parser')
 const express = require('express');
 const app = express();
 const genres = require('./routes/genres');
+const customers = require('./routes/customers')
+const mongoose = require("mongoose");
+
+mongoose.connect('mongodb://127.0.0.1:27017/VIDLY', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+    .then(() => console.log('Connected to MongoDB...'))
+    .catch(err => console.error('Could not connect to mongoDB...', err))
+
 
 app.use(bodyParser.json());
 app.use(
@@ -11,6 +21,7 @@ app.use(
     })
 );
 app.use('/api/genres', genres);
+app.use('/api/customer', customers)
 
 const port = process.env.PORT || 3003;
 app.listen(port, () => {
