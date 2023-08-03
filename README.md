@@ -22,4 +22,4 @@ and as an Admin you can:
 
 ## 📜 Built By:
 
-Khaled Almansour CEO & Owner of Mugendai: [[Mugendai.io](Mugendai.io)](https://mugendai.io/)
+Khaled Almansour CEO & Owner of Mugendai: [Mugendai.io(Mugendai.io)](https://mugendai.io/)
